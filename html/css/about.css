@@ -1,0 +1,15 @@
+/*about.html*/
+.aboutText {
+	padding: 20px 30px;
+	box-shadow: 0 0 2px rgba(0,0,0,.2);
+	margin: 20px 0;
+	background: #fff;
+}
+.aboutText p {
+	margin: 15px 0; 
+	text-indent: 28px; 
+	font-size: 14px; 
+	text-align: justify; 
+	line-height: 1.8; 
+	word-break: break-all; 
+}
