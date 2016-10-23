@@ -1,2 +1,5 @@
-# qys-blog
-This is qys's blog
+# Blog of Fannie Shi
+
+Blog: http://fannieshi.com.
+
+Topics: Web Front-End Developing and More.
