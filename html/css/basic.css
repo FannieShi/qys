@@ -33,6 +33,8 @@ input,button {
 	width: 1100px; 
 	margin: 0 auto; 
 }
+/*html5*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 
 /*#66a690 网站主色调*/
 /*header*/
@@ -100,6 +102,7 @@ input,button {
 	width: 100%; 
 	height: 290px;  
 	margin: 0 auto 10px auto;
+	border-radius: 5px;
 	background: url(../imgs/img13.jpg) no-repeat center;
 }
 .banner .text {
@@ -147,6 +150,7 @@ input,button {
 .sidebar {
 	display: table-cell;
 	width: 27%;
+	border-radius: 5px;
 	color: #fff;
 	background: #66a690;
 }
@@ -201,10 +205,10 @@ input,button {
 	background-position: left 50%; 
 }
 .qys-intro p.icon4 {
-	background-position: left 74%; 
+	background-position: left 101%; 
 }
 .qys-intro p.icon5 {
-	background-position: left 101%; 
+	background: url(../imgs/img04.png) no-repeat left center;
 }
 .qys-intro p:hover {
 	background: rgba(255,255,255,.2);
