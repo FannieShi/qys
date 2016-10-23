@@ -1,3 +1,9 @@
+<?php
+	//定义一个常量，用来授权调用includes里面的文件
+	define('IN_TG', true);
+	//调用公共文件
+	require dirname(__FILE__).'/includes/common.inc.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,25 +22,9 @@
 <![endif]-->
 </head>
 <body>
-	<!--整个网站色调掉为绿色-->
-	<header class="header">
-		<div class="wrap">
-			<div class="logo">
-				<a href="index.html">
-					<h1>七月上</h1>
-				</a>
-			</div>
-			<nav class="nav">
-				<ul>
-					<li><a href="index.html">首页</a></li>
-					<li><a href="about.html">关于我</a></li>
-					<li class="active"><a href="blog.html">前端小记</a></li>
-					<li><a href="life.html">生活碎碎念</a></li>
-					<li><a href="message.html">留言板</a></li>
-				</ul>
-			</nav>
-		</div>	
-	</header>	
+	<?php
+		require ROOT_PATH.'includes/header.inc.php';
+	?>	
 	<section class="wrap">
 		<div class="banner" style="background-image: url(imgs/img17.jpg);">
 			<div class="text">
@@ -51,10 +41,10 @@
 				</h3>
 				<article class="blog">
 					<h4>
-						<a href="artical.html">移动端问题总结（二）</a>
+						<a href="artical.php">移动端问题总结（二）</a>
 					</h4>
 					<div class="thumbnail">
-						<a href="artical.html">
+						<a href="artical.php">
 							<img src="imgs/img08.jpg" alt="" />
 						</a>							
 					</div>
@@ -64,13 +54,13 @@
 						<p>1）区块内字体不能垂直居中，在移动端产生偏移</p>
 						<p>其实这个问题在之前就注意过，手机自带浏览器就有这样的情况。此时为了举例去看，已经没有这种写法了，想必也是觉得不够“优雅”。</p>
 						<p class="readmore">
-							<a href="artical.html" target="_blank">阅读全文&rsaquo;&rsaquo;</a>
+							<a href="artical.php" target="_blank">阅读全文&rsaquo;&rsaquo;</a>
 						</p>					
 					</div>
 					<div class="info">
-						<span>版块：[<a href="blog.html">前端小记</a>]</span>
-						<span>浏览（<a href="a01.html" class="view">9</a>）</span>
-						<span>评论（<a href="a01.html" class="comment">0</a>）</span>
+						<span>版块：[<a href="blog.php">前端小记</a>]</span>
+						<span>浏览（<a href="a01.php" class="view">9</a>）</span>
+						<span>评论（<a href="a01.php" class="comment">0</a>）</span>
 					</div>
 					<div class="dates">
 						2016-08-25
@@ -78,10 +68,10 @@
 				</article>
 				<article class="blog">
 					<h4>
-						<a href="artical.html">玩转HTML5移动页面</a>
+						<a href="artical.php">玩转HTML5移动页面</a>
 					</h4>
 					<div class="thumbnail">
-						<a href="artical.html">
+						<a href="artical.php">
 							<img src="imgs/img09.jpg" alt="" />
 						</a>							
 					</div>
@@ -93,7 +83,7 @@
 						<p>这次就来谈谈一些动画设计的小技巧，能在你时间不多又没有动画想法的时候瞬间让页面增色不少。
 同时也会谈及移动端H5页面的优化细节与关键点，因此本文章将分为动效篇和优化篇。</p>
 						<p class="readmore">
-							<a href="artical.html" target="_blank">阅读全文&rsaquo;&rsaquo;</a>
+							<a href="artical.php" target="_blank">阅读全文&rsaquo;&rsaquo;</a>
 						</p>					
 					</div>
 					<div class="info">
@@ -107,10 +97,10 @@
 				</article>
 				<article class="blog">
 					<h4>
-						<a href="artical.html">玩转HTML5移动页面</a>
+						<a href="artical.php">玩转HTML5移动页面</a>
 					</h4>
 					<div class="thumbnail">
-						<a href="artical.html">
+						<a href="artical.php">
 							<img src="imgs/img10.jpg" alt="" />
 						</a>							
 					</div>
@@ -122,7 +112,7 @@
 						<p>这次就来谈谈一些动画设计的小技巧，能在你时间不多又没有动画想法的时候瞬间让页面增色不少。
 同时也会谈及移动端H5页面的优化细节与关键点，因此本文章将分为动效篇和优化篇。</p>
 						<p class="readmore">
-							<a href="artical.html" target="_blank">阅读全文&rsaquo;&rsaquo;</a>
+							<a href="artical.php" target="_blank">阅读全文&rsaquo;&rsaquo;</a>
 						</p>					
 					</div>
 					<div class="info">
@@ -142,7 +132,7 @@
 				<div class="qys-img">
 					<img src="imgs/img05.jpg" alt="" />
 					<div class="about">
-						<a href="about.html">关于七月上</a>
+						<a href="about.php">关于七月上</a>
 					</div>
 				</div>
 			</div>
@@ -234,10 +224,9 @@
 					</dd>
 				</dl>
 			</div>
-			<div class="copyright">
-				<p>Copyright ©2016 七月上 </p>
-				<!--<p>蜀ICP备11002373号-1</p>-->
-			</div>
+			<?php
+				require ROOT_PATH.'includes/footer.inc.php';
+			?>
 		</div>
 	</section>
 </body>

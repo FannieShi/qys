@@ -1,3 +1,9 @@
+<?php
+	//定义一个常量，用来授权调用includes里面的文件
+	define('IN_TG', true);
+	//调用公共文件
+	require dirname(__FILE__).'/includes/common.inc.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,25 +22,9 @@
 <![endif]-->
 </head>
 <body>
-	<!--整个网站色调掉为绿色-->
-	<header class="header">
-		<div class="wrap">
-			<div class="logo">
-				<a href="index.html">
-					<h1>七月上</h1>
-				</a>
-			</div>
-			<nav class="nav">
-				<ul>
-					<li><a href="index.html">首页</a></li>
-					<li class="active"><a href="about.html">关于我</a></li>
-					<li><a href="blog.html">前端小记</a></li>
-					<li><a href="life.html">生活碎碎念</a></li>
-					<li><a href="message.html">留言板</a></li>
-				</ul>
-			</nav>
-		</div>	
-	</header>	
+	<?php
+		require ROOT_PATH.'includes/header.inc.php';
+	?>	
 	<section class="wrap">
 		<div class="banner" style="background-image: url(imgs/img12.jpg);">
 			<div class="text">
@@ -83,7 +73,7 @@
 				<div class="qys-img">
 					<img src="imgs/img05.jpg" alt="" />
 					<div class="about">
-						<a href="about.html">关于七月上</a>
+						<a href="about.php">关于七月上</a>
 					</div>
 				</div>
 				<!--外链网易云音乐-->
@@ -104,10 +94,9 @@
 					<iframe width="100%" height="90" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=350&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=2647637494&verifier=72a768f2&colors=71c4a7,66a690,fff,eee,66a690&dpc=1"></iframe>
 				</div>
 			</div>
-			<div class="copyright">
-				<p>Copyright ©2016 七月上 </p>
-				<p><!--蜀ICP备11002373号-1--></p>
-			</div>
+			<?php
+				require ROOT_PATH.'includes/footer.inc.php';
+			?>
 		</aside>
 	</div>
 </body>

@@ -1,3 +1,9 @@
+<?php
+	//定义一个常量，用来授权调用includes里面的文件
+	define('IN_TG', true);
+	//调用公共文件
+	require dirname(__FILE__).'/includes/common.inc.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,31 +22,15 @@
 <![endif]-->
 </head>
 <body>
-	<!--整个网站色调掉为绿色-->
-	<header class="header">
-		<div class="wrap">
-			<div class="logo">
-				<a href="index.html">
-					<h1>七月上</h1>
-				</a>
-			</div>
-			<nav class="nav">
-				<ul>
-					<li><a href="index.html">首页</a></li>
-					<li><a href="about.html">关于我</a></li>
-					<li class="active"><a href="blog.html">前端小记</a></li>
-					<li><a href="life.html">生活碎碎念</a></li>
-					<li><a href="message.html">留言板</a></li>
-				</ul>
-			</nav>
-		</div>	
-	</header>	
+	<?php
+		require ROOT_PATH.'includes/header.inc.php';
+	?>		
 	<section class="wrap clearfix">
 		<div class="main">
 			<div class="crumbs">
-				<a href="index.html">首页</a>
+				<a href="index.php">首页</a>
 				<i>/</i>
-				<a href="blog.html">前端小记</a>
+				<a href="blog.php">前端小记</a>
 				<i>/</i>
 				玩转HTML5移动页面
 			</div>
@@ -82,7 +72,7 @@
 				<div class="qys-img">
 					<img src="imgs/img05.jpg" alt="" />
 					<div class="about">
-						<a href="about.html">关于七月上</a>
+						<a href="about.php">关于七月上</a>
 					</div>
 				</div>
 			</div>
@@ -174,10 +164,9 @@
 					</dd>
 				</dl>
 			</div>
-			<div class="copyright">
-				<p>Copyright ©2016 七月上 </p>
-				<!--<p>蜀ICP备11002373号-1</p>-->
-			</div>
+			<?php
+				require ROOT_PATH.'includes/footer.inc.php';
+			?>
 		</div>
 	</div>
 </body>
