@@ -4,7 +4,7 @@ $(function(){
 	,2000,'swing',function(){
 		$('.banner p').last().animate({'opacity':'1','filter':'alpha(opacity=100)'},2000,'swing');
 	});
-	var $hd = $('.header');
+	var $hd = $('header');
 	var $sTop1, $hTop = $hd.offset().top + $hd.height();
 	$(window).bind('scroll',function(){
 		var $sTop2 = $(window).scrollTop();

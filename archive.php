@@ -1,9 +1,13 @@
 <?php get_header(); ?>		
 <div class="main">
 	<div class="bloglist">
-		<h3 class="title">
-			<span>最新文章</span>
-		</h3>
+		<div class="crumbs">
+			<a href="<?php echo get_option('home'); ?>/">首页</a>
+			<i>/</i>
+			<?php the_category(', '); ?>
+			<i>/</i>
+			最新文章
+		</div>
 		<!-- Blog Post -->
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<article class="blog">
