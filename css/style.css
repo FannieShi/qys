@@ -170,6 +170,7 @@ nav ul li.active {
  */
 header {
 	width: 100%;
+	min-width: 1100px;
 	height: 60px; 
 	line-height: 60px; 
 	margin-bottom: 20px;
@@ -424,14 +425,56 @@ header.fixed.show {
 	border-radius: 3px;
 }
 .post-content {
+	font-family: Georgia,微软雅黑;
+	word-spacing: 3px;
 	font-size: 14px; 
 	text-align: justify; 
 	line-height: 1.8; 
 	word-break: break-all; 
 }
+.post-content h4 {
+	margin-bottom: 5px;
+	font-size: 15px;
+	font-weight: bold;
+}
 .post-content p {
 	margin-bottom: 5px;
 	text-indent: 28px; 
+}
+.post-content img {
+	max-width: 100%;
+	vertical-align: top;
+}
+.post-content a {
+	color: #34538b;
+}
+.post-content a:hover {
+	color: #147;
+	text-decoration: underline;
+}
+.post-content pre {
+	padding: 10px 20px;
+	margin: 5px 0;
+	border: 1px dashed #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	font-size: 13px;
+	color: #111;
+	font-family: "Lucida Console", Consolas, Monaco;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	background: #eee;
+	background-color: rgba(0,0,0,.07);
+	overflow-x: auto;
+}
+.post-content code {
+	border: 1px solid #eaeaea;
+	padding: 3px 5px;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-radius: 3px;
+	font-family: "Lucida Console", Consolas, Monaco;
+	background: #f8f8f8;
 }
 /**
  * 11.0 - Content
@@ -707,6 +750,13 @@ header.fixed.show {
 .lists a:hover {
 	color: #fff;
 	text-decoration: underline;
+}
+.lists li a {
+	max-width: 242px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .lists dl {
 	padding: 30px;

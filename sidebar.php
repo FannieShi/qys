@@ -4,7 +4,7 @@
 		<div class="qys-img">
 			<img src="<?php bloginfo('template_url'); ?>/imgs/img05.jpg" alt="" />
 			<div class="about">
-				<a href="<?php bloginfo('template_url'); ?>/about">关于七月上</a>
+				<a href="<?php bloginfo('template_url'); ?>/about">关于我</a>
 			</div>
 		</div>
 		<?php if (is_category() || is_single()){ ?>
@@ -21,7 +21,7 @@
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=297 height=86 src="http://music.163.com/outchain/player?type=2&id=31445554&auto=0&height=66"></iframe>
 			</div>
 			<div class="qys-intro">
-				<p class="icon1">姓名：七月上｜Fannie Shi</p>
+				<p class="icon1">姓名：石帆｜Fannie Shi</p>
 				<p class="icon2">职业：Web前端开发</p>
 				<p class="icon3">籍贯：湖北省-黄冈市</p>
 				<p class="icon4">邮箱：me@fannieshi.com</p>

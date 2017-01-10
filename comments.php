@@ -4,7 +4,7 @@
 ?>
 <?php if (comments_open()) :?>
 <article class="comment">
-	<h3 class="title">
+	<h3 class="title" id="comments">
 		<span>发表评论</span>
 	</h3>
 	<?php comment_form(
@@ -20,21 +20,6 @@
 			'logged_in_as' => ''
 		)
 	);?>
-	<!--<div class="commentForm">
-		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentForm" name="commentForm">
-			<div class="textarea">
-				<textarea name="comment" placeholder="既然来了，说点什么吧..."></textarea>
-			</div>
-			<div class="inputs">
-				<?php if (!is_user_logged_in()) : ?>
-				<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" placeholder="*您的昵称"/>
-				<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" placeholder="*电子邮件（不会被公开）"/>
-				<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" placeholder="个人网站"/>
-				<?php endif; ?>					
-				<button type="submit">发表评论</button>
-			</div>
-		</form>
-	</div>-->
 </article>
 <?php endif; ?>
 <article class="comment">
@@ -60,3 +45,10 @@
 	    ?>	
 	</ul>
 </article>
+
+<script type="text/javascript">
+	$('.reply a').click(function(){
+		var $at_author = '@' + $(this).parent().siblings('.authorName').find('.author').text()+ ' ';
+		$('#respond textarea').text($at_author);
+	});
+</script>

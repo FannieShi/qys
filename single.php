@@ -9,7 +9,7 @@
 	</div>
 	<?php if (have_posts()) : the_post(); update_post_caches($posts); ?>
 	<article class="post">
-		<h4 class="post-title"><?php the_title(); ?></h4>
+		<h2 class="post-title"><?php the_title(); ?></h2>
 		<div class="post-info">
 			<span class="post-author"><?php the_author(); ?></span>
 			<span class="post-date"><?php the_time('Y-m-d') ?></span>

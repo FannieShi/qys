@@ -37,7 +37,7 @@
 	        	<?php comment_text(); ?>
 			</div>
 			<div class="reply">
-				<?php comment_reply_link(array_merge( $args, array('reply_text' => '回复','depth' => $depth, 'max_depth' => $args['max_depth']))) ?>&nbsp;&nbsp;
+				<a href="#comments">回复　</a>
 			</div>
 		</li>
 	<?php } ?>
