@@ -1,5 +1,10 @@
-# Blog of Fannie Shi
+# Theme of wordpress
 
-Blog: http://fannieshi.com
+Theme Name: 七月上
 
-Topics: Web Front-End Developing and More.
+Author: [Fannie Shi](http://fannieshi.com/)
+
+Author URI: http://fannieshi.com/
+
+Description: it's a wordpress theme which named qys and apply to PC and mobile.
+
